@@ -1,0 +1,91 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  background-image: url(../img/header2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+  min-height: 30rem;
+  position: relative;
+
+  @include m.tablet {
+    min-height: 40rem;
+  }
+
+  &::before {
+    content: "";
+    background-color: v.$negro;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+  }
+
+  &__contenedor {
+    @include m.contenedor;
+    position: relative;
+  }
+
+  &__barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__titulo {
+    font-size: 4.4rem;
+    text-align: center;
+    color: v.$rojo;
+    font-weight: v.$bold;
+
+    @include m.tablet {
+      font-size: 5rem;
+    }
+  }
+
+  &__texto {
+    color: v.$blanco;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+// .header {
+//   background-image: url(../img/header2.jpg);
+// }
+
+.navegacion {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @include m.tablet {
+    flex-direction: row;
+    margin-top: 0;
+  }
+  
+  &__enlace {
+    color: v.$rojo;
+    font-size: 2rem;
+    font-weight: v.$bold;
+    background-color: v.$azul;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in;
+    &:hover {
+      padding: 1.3rem;
+    }
+  }
+}
