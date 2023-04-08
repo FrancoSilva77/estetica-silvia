@@ -1,0 +1,39 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.servicios {
+  @include m.contenedor;
+
+  &__grid {
+    @include m.grid(1, 2rem);
+
+    @include m.tablet {
+      @include m.grid(3, 2rem);
+      gap: 10rem;
+    }
+  }
+
+  &__heading {
+    margin: 5rem 0;
+    text-align: center;
+    color: v.$rojo;
+  }
+}
+
+.servicio {
+  &__titulo {
+    color: v.$azul;
+    text-align: center;
+  }
+  &__precio {
+    font-size: 2.8rem;
+    font-weight: v.$bold;
+    color: v.$rojo;
+    text-align: center;
+  }
+  &__iconos {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+}
