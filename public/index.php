@@ -3,17 +3,21 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\LoginController;
+use Controllers\PaginasController;
 use MVC\Router;
 
 $router = new Router();
 
+// Página principal
+$router->get('/', [PaginasController::class, 'index']);
+
 //Crear cuenta
-$router->get('/crear', [LoginController::class, 'crear']);
-$router->post('/crear', [LoginController::class, 'crear']);
+$router->get('/crear-cuenta', [LoginController::class, 'crear']);
+$router->post('/crear-cuenta', [LoginController::class, 'crear']);
 
 // Iniciar sesión
-$router->get('/', [LoginController::class, 'login']);
-$router->post('/', [LoginController::class, 'login']);
+$router->get('/login', [LoginController::class, 'login']);
+$router->post('/login', [LoginController::class, 'login']);
 $router->get('/logout', [LoginController::class, 'logout']);
 
 // Recuperar password
