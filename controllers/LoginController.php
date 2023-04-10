@@ -10,7 +10,9 @@ class LoginController
 {
   public static function login(Router $router)
   {
-    $router->render('/auth/login');
+    $router->render('/auth/login', [
+      "titulo" => 'Iniciar sesión'
+    ]);
   }
 
   public static function logout()
@@ -20,7 +22,9 @@ class LoginController
 
   public static function olvide(Router $router)
   {
-    $router->render('/auth/olvide');
+    $router->render('/auth/olvide', [
+      'titulo' => 'Olvide mi Contraseña'
+    ]);
   }
 
   public static function recuperar()
