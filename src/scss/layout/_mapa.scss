@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+
+.ubicacion {
+  &__heading {
+    margin: 5rem 0;
+    text-align: center;
+    color: v.$rojo;
+  }
+}
+
+.mapa {
+  height: 45rem;
+  margin-top: 5rem;
+
+  &__heading {
+    margin: 0;
+    text-align: left;
+    font-size: 2.4rem;
+  }
+
+  &__texto {
+    font-size: 1.6rem;
+  }
+}
