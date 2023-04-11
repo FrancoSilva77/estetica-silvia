@@ -30,8 +30,8 @@ class Email
     $mail->Username   = '37e6ed82e63aa5';                     //SMTP username
     $mail->Password   = '1fb71fb02267dd';                               //SMTP password
 
-    $mail->setFrom('cuentas@peluqueria.com');
-    $mail->addAddress('cuentas@peluqueria.com', 'Peluqueria.com');
+    $mail->setFrom('cuentas@estetica.com');
+    $mail->addAddress('cuentas@estetica.com', 'Estetica Silvia');
     $mail->Subject = 'Confirma tu cuenta';
 
     // Set HTML
@@ -40,7 +40,7 @@ class Email
 
 
     $contenido = "<html>";
-    $contenido .= "<p><strong>Hola " . $this->nombre . " </strong> Has creado tu cuenta en Peluqueria, solo debes confirmarla presionando el siguiente enlace</p>";
+    $contenido .= "<p><strong>Hola " . $this->nombre . " </strong> Has creado tu cuenta en Estetica Silvia, solo debes confirmarla presionando el siguiente enlace</p>";
     $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a>";
     $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
     $contenido .= "</html>";
