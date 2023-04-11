@@ -2,7 +2,9 @@
   <div class="header__contenedor">
 
     <div class="header__barra">
-      <h2 class="header__titulo">Estetica Unisex Silvia</h2>
+      <a href="/">
+        <h2 class="header__titulo">Estetica Unisex Silvia</h2>
+      </a>
       <nav class="navegacion">
         <a href="/login" class="navegacion__enlace">Iniciar Sesión</a>
         <a href="/crear-cuenta" class="navegacion__enlace">Registrarse</a>
