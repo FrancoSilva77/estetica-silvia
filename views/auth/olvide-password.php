@@ -2,9 +2,9 @@
   <h2 class="auth__heading"><?php echo $titulo; ?></h2>
   <p class="auth__texto">Recupera tu acceso a Estética Silvia</p>
 
-  <!-- <?php 
-    //require_once __DIR__ . '/../templates/alertas.php';
-  ?> -->
+  <?php
+  require_once __DIR__ . '/../templates/alertas.php';
+  ?>
 
   <form action="/olvide" method="POST" class="formulario">
     <div class="formulario__campo">
