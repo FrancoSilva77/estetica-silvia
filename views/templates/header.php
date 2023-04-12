@@ -20,5 +20,5 @@
 
   </header>
 <?php } else { ?>
-  <h1 class="header__cita">Estetica Silvia</h1>
+  <h1 class="cita__header">Estetica Silvia</h1>
 <?php } ?>
