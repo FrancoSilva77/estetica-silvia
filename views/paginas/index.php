@@ -57,3 +57,9 @@ include_once __DIR__ . '/horarios.php';
 
   <p class="contacto__telefono">Número de Teléfono: <span class="contacto__telefono--span">238-128-42-84</span></p>  
 </section>
+
+<?php 
+$script = "
+  <script src='build/js/mapa.js' defer></script>
+"
+?>

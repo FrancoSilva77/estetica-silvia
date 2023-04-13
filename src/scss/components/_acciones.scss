@@ -1,9 +1,18 @@
-@use 'base/variables' as v;
+@use "base/variables" as v;
+@use 'base/mixins' as m;
 
-.acciones{
+.acciones {
   margin-top: 3rem;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
 
   &--centrar {
     @extend .acciones;

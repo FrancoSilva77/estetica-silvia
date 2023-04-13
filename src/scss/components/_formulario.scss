@@ -44,7 +44,8 @@
   &__submit {
     @include m.boton(v.$azul, v.$blanco);
     width: auto;
-    align-self: flex-end;
+    align-self: center;
+    margin: 2rem 0;
 
     &--registrar,
     &--full {
