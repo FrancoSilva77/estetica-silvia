@@ -1,0 +1,38 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.listado-servicios {
+  @include m.grid(1, 2rem);
+
+  @include m.telefono {
+    @include m.grid(2, 2rem);
+  }
+
+  @include m.tablet {
+    @include m.grid(3, 2rem);
+  }
+
+  .servicio {
+    background-color: v.$blanco;
+    border: 1px solid v.$rojo;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.2s ease-in;
+
+    &__precio,
+    &__nombre {
+      color: v.$azul;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &__seleccionado {
+      background-color: v.$rojo;
+      p {
+        color: v.$blanco;
+      }
+    }
+  }
+}
