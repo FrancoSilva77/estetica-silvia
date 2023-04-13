@@ -34,7 +34,12 @@
 
           <div class="formulario__campo">
             <label for="hora" class="formulario__label">Hora:</label>
-            <input type="time" class="formulario__input" id="hora" name="hora">
+            <select name="fecha" id="fecha">
+              <option value="">-- Seleccione Hora --</option>
+              <?php foreach ($horas as $hora) { ?>
+                <option value="<?php echo $hora->id; ?>"><?php echo $hora->hora; ?></option>
+              <?php } ?>
+            </select>
           </div>
         </form>
     </div>
@@ -51,7 +56,7 @@
   </div>
 </main>
 
-<?php 
+<?php
 $script = "
   <script src='build/js/tabs.js'></script>
   <script src='build/js/consultarAPI.js'></script>

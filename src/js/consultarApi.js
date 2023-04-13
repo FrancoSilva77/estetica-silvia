@@ -13,8 +13,10 @@ let ultimoDivSeleccionado = null;
 
 async function consultarAPI() {
   try {
-    const url = `http://localhost:3000/api/servicios`;
-    const resultado = await fetch(url);
+    const urlAPI = "http://localhost:3000/api"
+    const urlServicios = `${urlAPI}/servicios`;
+
+    const resultado = await fetch(urlServicios);
     const servicios = await resultado.json();
 
     mostrarServicios(servicios);
