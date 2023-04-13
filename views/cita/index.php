@@ -54,5 +54,6 @@
 <?php 
 $script = "
   <script src='build/js/tabs.js'></script>
+  <script src='build/js/consultarAPI.js'></script>
 "
 ?>

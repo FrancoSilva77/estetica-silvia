@@ -2,7 +2,7 @@
 @use "base/mixins" as m;
 
 .cita {
-  @include m.contenedor-sm;
+  @include m.contenedor-md;
   text-align: center;
 
   &__header {
