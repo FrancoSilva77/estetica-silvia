@@ -1,3 +1,5 @@
+import { mostrarResumen as resumen } from './consultarApi.js'
+
 let paso = 1;
 const paginaInicial = 1;
 const paginaFinal = 3;
@@ -59,6 +61,8 @@ function paginador() {
   } else if (paso === 3) {
     paginaAnterior.classList.remove("ocultar");
     paginaSiguiente.classList.add("ocultar");
+
+    resumen();
   } else {
     paginaAnterior.classList.remove("ocultar");
     paginaSiguiente.classList.remove("ocultar");

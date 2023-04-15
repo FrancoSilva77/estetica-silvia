@@ -7,13 +7,16 @@ const cita = {
 
 consultarAPI();
 nombreCliente(); // Añade el nombre del cliente al objeto de cita
+seleccionarFecha(); // Añade fecha de la cita al objeto
+seleccionarHora(); //Añade la hora de la cita al objeto
 
+mostrarResumen(); // Muestra el resumen de la cita
 
 let ultimoDivSeleccionado = null;
 
 async function consultarAPI() {
   try {
-    const urlAPI = "http://localhost:3000/api"
+    const urlAPI = "http://localhost:3000/api";
     const urlServicios = `${urlAPI}/servicios`;
 
     const resultado = await fetch(urlServicios);
@@ -76,8 +79,6 @@ function seleccionarServicio(servicio) {
     divServicio.classList.add("servicio__seleccionado");
     ultimoDivSeleccionado = divServicio;
   }
-
-  console.log(cita);
 }
 
 function nombreCliente() {
@@ -85,3 +86,100 @@ function nombreCliente() {
 
   cita.nombre = nombre;
 }
+
+function seleccionarFecha() {
+  const inputFecha = document.querySelector("#fecha");
+  inputFecha.addEventListener("input", function (e) {
+    cita.fecha = e.target.value;
+  });
+}
+
+function seleccionarHora() {
+  const inputHora = document.querySelector("#hora");
+  inputHora.addEventListener("input", function (e) {
+    cita.hora = e.target.value;
+  });
+}
+
+function mostrarAlerta(mensaje, tipo, elemento, desaparece = true) {
+  // * Previene que se genere mas de una alerta
+  const alertaPrevia = document.querySelector(".alerta");
+  if (alertaPrevia) {
+    alertaPrevia.remove();
+  }
+
+  // * Scripting para generar una alerta
+  const alerta = document.createElement("DIV");
+  alerta.textContent = mensaje;
+  alerta.classList.add("alerta");
+  alerta.classList.add(`alerta__${tipo}--resumen`);
+
+  const referencia = document.querySelector(elemento);
+  referencia.appendChild(alerta);
+
+  if (desaparece) {
+    // * Eliminar la alerta
+    setTimeout(() => {
+      alerta.remove();
+    }, 3000);
+  }
+}
+
+function mostrarResumen() {
+  const resumen = document.querySelector(".cita__resumen");
+
+  // Limpiar contenido del resumen
+  while (resumen.firstChild) {
+    resumen.removeChild(resumen.firstChild);
+  }
+
+  if (Object.values(cita).includes("") || cita.servicios.length === 0) {
+    mostrarAlerta(
+      "Falta el servicio, la fecha o la hora",
+      "error",
+      ".cita__resumen",
+      false
+    );
+    return;
+  }
+
+  // Formatear el div de resumen
+  const { nombre, fecha, hora, servicios } = cita;
+
+  // * Seleccionar el contenido de la hora
+  const horaContenido = document.querySelector(`[value="${hora}"`).textContent;
+
+  servicios.forEach((servicio) => {
+    const { id, precio, nombre } = servicio;
+
+    const contenedorServicio = document.createElement("DIV");
+    contenedorServicio.classList.add("cita__contenedor");
+
+    const textoServicio = document.createElement("P");
+    textoServicio.textContent = nombre;
+
+    const precioServicio = document.createElement("P");
+    precioServicio.innerHTML = `<span>Precio: </span> ${precio}`;
+
+    contenedorServicio.appendChild(textoServicio);
+    contenedorServicio.appendChild(precioServicio);
+
+    resumen.appendChild(contenedorServicio);
+  });
+
+  const nombreCliente = document.createElement("P");
+  nombreCliente.innerHTML = `<span>Nombre:</span> ${nombre}`;
+
+  const fechaCita = document.createElement("P");
+  fechaCita.innerHTML = `<span>Fecha:</span> ${fecha}`;
+
+  const horaCita = document.createElement("P");
+  horaCita.innerHTML = `<span>Hora:</span> ${horaContenido}`;
+
+  resumen.appendChild(nombreCliente);
+  resumen.appendChild(fechaCita);
+  resumen.appendChild(horaCita);
+}
+
+
+export {mostrarResumen};

@@ -29,12 +29,12 @@
 
           <div class="formulario__campo">
             <label for="fecha" class="formulario__label">Fecha:</label>
-            <input type="date" class="formulario__input" id="fecha" name="fecha">
+            <input type="date" class="formulario__input" id="fecha" name="fecha" min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
           </div>
 
           <div class="formulario__campo">
             <label for="hora" class="formulario__label">Hora:</label>
-            <select name="fecha" id="fecha">
+            <select name="hora" id="hora">
               <option value="">-- Seleccione Hora --</option>
               <?php foreach ($horas as $hora) { ?>
                 <option value="<?php echo $hora->id; ?>"><?php echo $hora->hora; ?></option>
@@ -44,21 +44,24 @@
         </form>
     </div>
 
-    <div class="cita__seccion" id="paso-3">
+    <div class="cita__seccion cita__resumen" id="paso-3">
       <h2>Resúmen</h2>
       <p>Verifica que la información sea correcta</p>
     </div>
 
     <div class="cita__paginacion">
-      <button id="anterior" class="cita__boton">&laquo; Anterior</button>
-      <button id="siguiente" class="cita__boton">Siguiente &raquo;</button>
+      <button type="button" id="anterior" class="cita__boton">&laquo; Anterior</button>
+      <button type="button" id="siguiente" class="cita__boton">Siguiente &raquo;</button>
     </div>
   </div>
 </main>
 
 <?php
 $script = "
-  <script src='build/js/tabs.js'></script>
-  <script src='build/js/consultarAPI.js'></script>
+<script src='build/js/app.js'></script>
 "
 ?>
+
+<!-- 
+<script src='build/js/tabs.js' type='module'></script>
+<script src='build/js/consultarAPI.js' type='module'></script> -->
