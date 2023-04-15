@@ -1,0 +1,27 @@
+@use "base/variables" as v;
+@use 'base/mixins' as m;
+
+.cita {
+  &__resumen {
+    border: 1px solid v.$rojo;
+    padding: 2rem;
+
+    p {
+      font-size: 2.2rem;
+      color: v.$azul;
+      font-weight: v.$bold;
+    }
+
+    span {
+      font-weight: v.$regular;
+    }
+  }
+  &__contenedor {
+    text-align: center;
+  }
+
+  &__reservar {
+    @include m.boton(v.$azul, v.$blanco);
+    margin: 0 auto;
+  }
+}

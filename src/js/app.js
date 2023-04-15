@@ -239,6 +239,12 @@ function mostrarResumen() {
   // * Seleccionar el contenido de la hora
   const horaContenido = document.querySelector(`[value="${hora}"`).textContent;
 
+  // Heading para servicios en Resumen
+  const headingServicios = document.createElement("H3");
+  headingServicios.textContent = "Resumen de la cita";
+  resumen.appendChild(headingServicios);
+
+  //Iterando y mostrando los servicios
   servicios.forEach((servicio) => {
     const { id, precio, nombre } = servicio;
 
@@ -246,10 +252,10 @@ function mostrarResumen() {
     contenedorServicio.classList.add("cita__contenedor");
 
     const textoServicio = document.createElement("P");
-    textoServicio.textContent = nombre;
+    textoServicio.innerHTML = `<span>Servicio: </span> ${nombre}`;
 
     const precioServicio = document.createElement("P");
-    precioServicio.innerHTML = `<span>Precio: </span> ${precio}`;
+    precioServicio.innerHTML = `<span>Precio: </span> $${precio}`;
 
     contenedorServicio.appendChild(textoServicio);
     contenedorServicio.appendChild(precioServicio);
@@ -260,13 +266,38 @@ function mostrarResumen() {
   const nombreCliente = document.createElement("P");
   nombreCliente.innerHTML = `<span>Nombre:</span> ${nombre}`;
 
+  // Formatear la fecha
+  const fechaObj = new Date(fecha);
+  const mes = fechaObj.getMonth();
+  const dia = fechaObj.getDate() + 2;
+  const year = fechaObj.getFullYear();
+
+  const fechaUTC = new Date(Date.UTC(year, mes, dia));
+
+  const opciones = { weekday: "long", year: 'numeric', month: 'long', day: 'numeric' };
+  const fechaFormateada = fechaUTC.toLocaleDateString("es-MX", opciones);
+  console.log(fechaFormateada);
+
   const fechaCita = document.createElement("P");
-  fechaCita.innerHTML = `<span>Fecha:</span> ${fecha}`;
+  fechaCita.innerHTML = `<span>Fecha:</span> ${fechaFormateada}`;
+  console.log(cita)
 
   const horaCita = document.createElement("P");
-  horaCita.innerHTML = `<span>Hora:</span> ${horaContenido}`;
+  horaCita.innerHTML = `<span>Hora:</span> ${horaContenido} Horas`;
+
+  // Boton para crear una cita
+  const botonReservar = document.createElement('BUTTON');
+  botonReservar.classList.add('cita__reservar')
+  botonReservar.textContent = 'Reservar Cita'
+  botonReservar.onclick = reservarCita;
 
   resumen.appendChild(nombreCliente);
   resumen.appendChild(fechaCita);
   resumen.appendChild(horaCita);
+  resumen.appendChild(botonReservar);
+}
+
+
+function reservarCita() {
+  console.log('Reservando')
 }
