@@ -19,6 +19,23 @@
     font-weight: v.$bold;
   }
 
+  &__barra {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include m.tablet {
+      flex-direction: row;
+      align-items: center
+    }
+  }
+
+  &__sesion {
+    @include m.boton(v.$blanco, v.$azul);
+    margin: 1rem;
+    border: 1px solid v.$rojo;
+  }
+
   &__seccion {
     margin: 3rem 0;
     display: none;

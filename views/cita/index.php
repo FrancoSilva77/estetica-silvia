@@ -2,6 +2,11 @@
   <h2 class="cita__heading">Crear Nueva Cita</h2>
   <p class="cita__descripcion">Elige tu servicio y coloca tus datos</p>
 
+  <div class="cita__barra">
+    <p>Hola <?php echo $nombre  ?? ''; ?></p>
+    <a href="/logout" class="cita__sesion">Cerrar Sesión</a>
+  </div>
+
   <div id="app">
 
     <nav class="cita__tabs">
@@ -41,6 +46,9 @@
               <?php } ?>
             </select>
           </div>
+
+          <input type="hidden" id="id" value="<?php echo $id; ?>">
+
         </form>
     </div>
 
@@ -58,8 +66,9 @@
 
 <?php
 $script = "
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 <script src='build/js/app.js'></script>
-"
+";
 ?>
 
 <!-- 
