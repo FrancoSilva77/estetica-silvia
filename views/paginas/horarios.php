@@ -2,9 +2,6 @@
   <div class="horario__grid contenedor">
     <div class="horario__contenido">
       <h3 class="horario__heading">Horarios</h3>
-      <p class="horario__texto">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil optio, maxime, deleniti aperiam atque in praesentium suscipit autem minus aliquam molestias eos, adipisci vero id enim doloribus ex rem delectus.
-      </p>
 
       <table class="tabla">
         <thead class="tabla__thead">
