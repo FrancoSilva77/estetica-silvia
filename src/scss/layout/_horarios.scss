@@ -23,6 +23,8 @@
   &__grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+    width: 100%;
     @include m.tablet {
       grid-template-rows: unset;
       @include m.grid(2, 5rem);
@@ -46,6 +48,7 @@
   border: 0.5rem solid v.$azul;
   text-align: center;
   border-collapse: collapse;
+  color: v.$blanco;
 
   &__thead {
     background-color: v.$azul;
