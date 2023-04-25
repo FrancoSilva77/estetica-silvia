@@ -38,6 +38,11 @@
             <p class="admin__lista-descripcion">Servicio: <span><?php echo $cita->servicio; ?></span></p>
             <p class="admin__lista-descripcion">Precio: <span><?php echo '$' . $cita->precio; ?></span></p>
 
+            <form action="/api/eliminar" method="POST">
+              <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
+              <input type="submit" class="admin__boton-eliminar" value="Eliminar">
+            </form>
+
           <?php endif; ?>
           </li>
         <?php endforeach; ?>
