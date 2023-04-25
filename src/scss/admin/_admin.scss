@@ -35,4 +35,12 @@
       color: v.$azul;
     }
   }
+
+  &__boton-eliminar {
+    @include m.boton(v.$rojo, v.$blanco);
+
+    @include m.tablet {
+      margin: 0 auto;
+    }
+  }
 }
