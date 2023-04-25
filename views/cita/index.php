@@ -39,7 +39,7 @@
 
           <div class="formulario__campo">
             <label for="hora" class="formulario__label">Hora:</label>
-            <select name="hora" id="hora">
+            <select class="formulario__select" name="hora" id="hora">
               <option value="">-- Seleccione Hora --</option>
               <?php foreach ($horas as $hora) { ?>
                 <option value="<?php echo $hora->id; ?>"><?php echo $hora->hora; ?></option>
