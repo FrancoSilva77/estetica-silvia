@@ -1,0 +1,38 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.admin {
+  @include m.contenedor-md;
+
+  &__busqueda {
+    margin-top: v.$separacion;
+    @include m.contenedor-sm;
+  }
+
+  &__lista-citas {
+    list-style: none;
+    display: grid;
+    @include m.grid(1, 1rem);
+
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+    }
+  }
+
+  &__lista-cita {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid v.$azul;
+    border-radius: 1rem;
+  }
+
+  &__lista-descripcion {
+    font-weight: v.$regular;
+    color: v.$rojo;
+
+    span {
+      font-weight: v.$bold;
+      color: v.$azul;
+    }
+  }
+}
