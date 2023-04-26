@@ -1,6 +1,6 @@
 <main class="admin">
   <h2 class="servicios__heading">Crear Nuevo Servicio</h2>
-  <p class="Servicios__descripcion">Llena todos los camos para crear un nuevo servicio</p>
+  <p class="servicios__descripcion">Llena todos los camos para crear un nuevo servicio</p>
 
   <?php
   include_once __DIR__ . '/../templates/barra-admin.php';

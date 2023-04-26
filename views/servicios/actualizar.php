@@ -1,6 +1,6 @@
 <main class="admin">
   <h2 class="servicios__heading">Actualizar Servicio</h2>
-  <p class="Servicios__descripcion">Actualiza o corrige el servicio</p>
+  <p class="servicios__descripcion">Actualiza o corrige el servicio</p>
 
   <?php
   include_once __DIR__ . '/../templates/barra-admin.php';
