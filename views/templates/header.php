@@ -20,5 +20,22 @@
 
   </header>
 <?php } else { ?>
-  <h1 class="cita__header">Estetica Silvia</h1>
+  <header class="header__login">
+    <div class="header__contenedor">
+
+      <div class="header__barra">
+        <a href="/">
+          <h2 class="header__titulo">Estetica Unisex Silvia</h2>
+        </a>
+        <nav class="navegacion">
+          <?php if (!$_SESSION['admin']) { ?>
+            <a href="/cita" class="navegacion__enlace">Agendar Cita</a>
+          <?php } else { ?>
+            <a href="/admin" class="navegacion__enlace">Administrar Citas</a>
+          <?php } ?>
+          <a href="/logout" class="navegacion__enlace">Cerrar Sesión</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 <?php } ?>
