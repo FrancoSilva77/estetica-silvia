@@ -51,6 +51,11 @@
     @include m.tablet {
       font-size: 5rem;
     }
+
+    &--login {
+      @extend .header__titulo;
+      margin: 0;
+    }
   }
 
   &__texto {
@@ -62,6 +67,7 @@
   }
 
   &__login {
+    padding: .1rem 0;
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75);

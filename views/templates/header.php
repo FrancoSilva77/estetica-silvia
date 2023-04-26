@@ -25,7 +25,7 @@
 
       <div class="header__barra">
         <a href="/">
-          <h2 class="header__titulo">Estetica Unisex Silvia</h2>
+          <h2 class="header__titulo--login">Estetica Unisex Silvia</h2>
         </a>
         <nav class="navegacion">
           <?php if (!$_SESSION['admin']) { ?>
