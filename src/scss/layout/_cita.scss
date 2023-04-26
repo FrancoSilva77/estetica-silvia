@@ -20,14 +20,8 @@
   }
 
   &__barra {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    @include m.tablet {
-      flex-direction: row;
-      align-items: center
-    }
+    text-align: center;
+    padding: .5rem 0;
   }
 
   &__sesion {

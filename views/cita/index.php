@@ -4,7 +4,6 @@
 
   <div class="cita__barra">
     <p>Hola <?php echo $nombre  ?? ''; ?></p>
-    <a href="/logout" class="cita__sesion">Cerrar Sesión</a>
   </div>
 
   <div id="app">
