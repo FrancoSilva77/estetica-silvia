@@ -4,6 +4,33 @@
 .admin {
   @include m.contenedor-md;
 
+  &__barra {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem 0;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 0 3rem;
+    }
+  }
+
+  &__barra-enlace {
+    background-color: v.$azul;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: v.$blanco;
+    font-size: 2rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: v.$rojo;
+    }
+  }
+
   &__busqueda {
     margin-top: v.$separacion;
     @include m.contenedor-sm;
@@ -11,7 +38,6 @@
 
   &__lista-citas {
     list-style: none;
-    display: grid;
     @include m.grid(1, 1rem);
 
     @include m.tablet {
@@ -42,5 +68,47 @@
     @include m.tablet {
       margin: 0 auto;
     }
+  }
+
+  &__servicios {
+    @extend .admin__lista-citas;
+  }
+
+  &__servicios-servicio {
+    @extend .admin__lista-cita;
+  }
+
+  &__servicios-descripcion {
+
+    span {
+      font-weight: v.$bold;
+    }
+  }
+
+  &__acciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center
+    }
+  }
+
+  &__servicios-actualizar {
+    @include m.boton(v.$amarillo, v.$blanco);
+  }
+
+  &__servicios-eliminar {
+    @include m.boton(v.$rojo, v.$blanco);
+  }
+
+  &__servicios-actualizar,
+  &__servicios-eliminar {
+    margin: 0;
+    border-radius: 1rem;
   }
 }
