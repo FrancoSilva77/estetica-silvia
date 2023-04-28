@@ -37,13 +37,15 @@
           </div>
 
           <div class="formulario__campo">
-            <label for="hora" class="formulario__label">Hora:</label>
-            <select class="formulario__select" name="hora" id="hora">
-              <option value="">-- Seleccione Hora --</option>
-              <?php foreach ($horas as $hora) { ?>
-                <option value="<?php echo $hora->id; ?>"><?php echo $hora->hora; ?></option>
-              <?php } ?>
-            </select>
+            <label for="horas" class="formulario__label">Hora:</label>
+
+            <ul class="horas" id="horas">
+              <?php foreach ($horas as $hora) : ?>
+                <li class="horas__hora horas__hora--desabilitada" data-hora-id="<?php echo $hora->id; ?>"><?php echo $hora->hora; ?></li>
+              <?php endforeach; ?>
+            </ul>
+
+            <input type="hidden" name="horaId" value="<?php echo $hora->id ?>">
           </div>
 
           <input type="hidden" id="id" value="<?php echo $id; ?>">
@@ -67,6 +69,7 @@
 $script = "
 <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 <script src='build/js/app.js'></script>
+<script src='build/js/horas.js'></script>
 ";
 ?>
 
