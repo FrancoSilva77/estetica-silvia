@@ -194,9 +194,9 @@ function seleccionarFecha() {
 }
 
 function seleccionarHora() {
-  const inputHora = document.querySelector("#hora");
-  inputHora.addEventListener("input", function (e) {
-    cita.hora = e.target.value;
+  const inputHora = document.querySelector("#horas");
+  inputHora.addEventListener("click", function (e) {
+    cita.hora = e.target.dataset.horaId;
   });
 }
 
@@ -246,7 +246,7 @@ function mostrarResumen() {
   const { nombre, fecha, hora, servicios } = cita;
 
   // * Seleccionar el contenido de la hora
-  const horaContenido = document.querySelector(`[value="${hora}"`).textContent;
+  const horaContenido = document.querySelector(`[data-hora-id="${hora}"`).textContent;
 
   // Heading para servicios en Resumen
   const headingServicios = document.createElement("H3");
