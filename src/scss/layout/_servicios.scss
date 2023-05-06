@@ -8,8 +8,8 @@
     @include m.grid(1, 2rem);
 
     @include m.tablet {
-      @include m.grid(3, 2rem);
-      gap: 10rem;
+      @include m.grid(4, 1rem);
+      gap: 5rem;
     }
   }
 
@@ -27,6 +27,9 @@
 }
 
 .servicio {
+  border: 1px solid v.$rojo;
+  border-radius: 1rem;
+  padding: 1rem;
   &__titulo {
     color: v.$azul;
     text-align: center;
