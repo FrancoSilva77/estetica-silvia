@@ -5,7 +5,7 @@
     <?php foreach ($servicios as $servicio) : ?>
       <div class="servicio">
         <h3 class="servicio__titulo"><?php echo $servicio->nombre; ?></h3>
-        <p class="servicio__precio"><?php echo $servicio->precio; ?></p>
+        <p class="servicio__precio">$<?php echo $servicio->precio; ?></p>
         <div class="servicio__iconos">
           <i class="fa-solid fa-scissors"></i>
           <i class="fa-solid fa-couch"></i>
@@ -13,7 +13,6 @@
       </div>
     <?php endforeach; ?>
   </div>
-
 </main>
 
 <?php
@@ -34,8 +33,4 @@ include_once __DIR__ . '/horarios.php';
   <p class="contacto__telefono">Número de Teléfono: <span class="contacto__telefono--span">238-128-42-84</span></p>
 </section>
 
-<?php
-$script = "
-  <script src='build/js/mapa.js' defer></script>
-"
-?>
+<?php $script = "<script src='build/js/mapa.js' defer></script>"?>
