@@ -31,7 +31,7 @@ class Email
     $mail->Password   = 'c3P18zZ4NVIbrhJv';                               //SMTP password
 
     $mail->setFrom('cuentas@estetica.com');
-    $mail->addAddress('cuentas@estetica.com', 'Estetica Silvia');
+    $mail->addAddress($this->email);
     $mail->Subject = 'Confirma tu cuenta';
 
     // Set HTML
