@@ -108,9 +108,8 @@ function paginaSiguiente() {
 }
 
 async function consultarAPI() {
-  try {
-    const urlAPI = "http://localhost:3000/api";
-    const urlServicios = `${urlAPI}/servicios`;
+  try {;
+    const urlServicios = `${location.origin}/api/servicios`;
 
     const resultado = await fetch(urlServicios);
     const servicios = await resultado.json();
@@ -326,7 +325,7 @@ async function reservarCita() {
 
   try {
     // Peticion hacia la API
-    const url = "http://localhost:3000/api/citas";
+    const url = `${location.origin}/api/citas`;
     const respuesta = await fetch(url, {
       method: "POST",
       body: datos,
