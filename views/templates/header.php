@@ -28,7 +28,7 @@ if (!isset($_SESSION['login'])) { ?>
           <h2 class="header__titulo--login">Estetica Unisex Silvia</h2>
         </a>
         <nav class="navegacion">
-          <?php if (!$_SESSION['admin']) { ?>
+          <?php if (!isset($_SESSION['admin'])) { ?>
             <a href="/cita" class="navegacion__enlace">Agendar Cita</a>
           <?php } else { ?>
             <a href="/admin" class="navegacion__enlace">Administrar Citas</a>
