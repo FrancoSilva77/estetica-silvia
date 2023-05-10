@@ -1,5 +1,5 @@
 <?php
-$_SESSION['login'] = false;
+session_start();
 if (!$_SESSION['login']) { ?>
 
   <header class="header">
