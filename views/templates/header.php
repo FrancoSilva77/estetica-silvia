@@ -1,4 +1,6 @@
-<?php if (!$_SESSION['login']) { ?>
+<?php
+$_SESSION['login'] = false;
+if (!$_SESSION['login']) { ?>
 
   <header class="header">
     <div class="header__contenedor">
