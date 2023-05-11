@@ -14,7 +14,7 @@ if (!isset($_SESSION['login'])) { ?>
       </div>
 
       <div class="header__texto">
-        <h1>Agenda tu cita, asi no tendrás que esperar</h1>
+        <h1>Agende su cita, asi no tendrá que esperar</h1>
       </div>
     </div>
 

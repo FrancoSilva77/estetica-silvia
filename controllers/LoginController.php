@@ -208,7 +208,7 @@ class LoginController
       $usuario->confirmado = '1';
       $usuario->token = "";
       $usuario->guardar();
-      Usuario::setAlerta('exito', 'Cuenta comprobada correctamente');
+      Usuario::setAlerta('exito', 'Confirmación de cuenta exitosa');
     }
 
     // Obtener alertas
