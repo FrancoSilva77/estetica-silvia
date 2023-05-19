@@ -33,11 +33,6 @@
       <input type="password" class="formulario__input" placeholder="Tu contraseña" id="password" name="password">
     </div>
 
-    <div class="formulario__campo">
-      <label for="password2" class="formulario__label">Repetir Contraseña:</label>
-      <input type="password" class="formulario__input" placeholder="Tu contraseña" id="password2" name="password2">
-    </div>
-
     <input type="submit" class="formulario__submit" value="Crear Cuenta">
   </form>
 
