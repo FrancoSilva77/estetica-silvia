@@ -30,7 +30,7 @@ class Email
     $mail->Username   = 'aspermasterone@gmail.com';                     //SMTP username
     $mail->Password   = 'c3P18zZ4NVIbrhJv';                               //SMTP password
 
-    $mail->setFrom('cuentas@estetica.com');
+    $mail->setFrom('esteticasilvia@esteticasilvia.com');
     $mail->addAddress($this->email);
     $mail->Subject = 'Confirma tu cuenta';
 
@@ -62,8 +62,8 @@ class Email
     $mail->Username   = '37e6ed82e63aa5';                     //SMTP username
     $mail->Password   = '1fb71fb02267dd';                               //SMTP password
 
-    $mail->setFrom('cuentas@peluqueria.com');
-    $mail->addAddress('cuentas@peluqueria.com', 'Peluqueria.com');
+    $mail->setFrom('esteticasilvia@esteticasilvia.com');
+    $mail->addAddress($this->email);
     $mail->Subject = 'Reestablece tu password';
 
     // Set HTML
