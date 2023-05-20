@@ -1,6 +1,6 @@
 <main class="auth">
   <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-  <p class="auth__texto">Tu cuenta Estética Silvia</p>
+  <p class="auth__texto">Tu cuenta en Salón Silvia Rubio Estilista</p>
 
   <?php
   require_once __DIR__ . '/../templates/alertas.php';

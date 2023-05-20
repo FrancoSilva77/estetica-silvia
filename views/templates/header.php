@@ -5,7 +5,7 @@ if (!isset($_SESSION['login'])) { ?>
 
       <div class="header__barra">
         <a href="/">
-          <h2 class="header__titulo">Estetica Unisex Silvia</h2>
+          <h2 class="header__titulo">Salón Silvia Rubio Estilista</h2>
         </a>
         <nav class="navegacion">
           <a href="/login" class="navegacion__enlace">Iniciar Sesión</a>
@@ -25,7 +25,7 @@ if (!isset($_SESSION['login'])) { ?>
 
       <div class="header__barra">
         <a href="/">
-          <h2 class="header__titulo--login">Estetica Unisex Silvia</h2>
+          <h2 class="header__titulo--login">Salón Silvia Rubio Estilista</h2>
         </a>
         <nav class="navegacion">
           <?php if (!isset($_SESSION['admin'])) { ?>
