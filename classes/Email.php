@@ -56,11 +56,11 @@ class Email
     // Crear el objeto de email
     $mail = new PHPMailer();
     $mail->isSMTP();
-    $mail->Host       = 'smtp.mailtrap.io';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp-relay.sendinblue.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;
     $mail->Port = 2525;                             //Enable SMTP authentication
-    $mail->Username   = '37e6ed82e63aa5';                     //SMTP username
-    $mail->Password   = '1fb71fb02267dd';                               //SMTP password
+    $mail->Username   = 'aspermasterone@gmail.com';                     //SMTP username
+    $mail->Password   = 'c3P18zZ4NVIbrhJv';                               //SMTP password
 
     $mail->setFrom('esteticasilvia@esteticasilvia.com');
     $mail->addAddress($this->email);
