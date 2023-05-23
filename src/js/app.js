@@ -130,7 +130,7 @@ function mostrarServicios(servicios) {
 
     const precioServicio = document.createElement("P");
     precioServicio.classList.add("servicio__precio");
-    precioServicio.textContent = `$ ${precio}`;
+    precioServicio.textContent = `Desde $ ${precio}`;
 
     const servicioDiv = document.createElement("DIV");
     servicioDiv.classList.add(`servicio`);
@@ -263,7 +263,7 @@ function mostrarResumen() {
     textoServicio.innerHTML = `<span>Servicio: </span> ${nombre}`;
 
     const precioServicio = document.createElement("P");
-    precioServicio.innerHTML = `<span>Precio: </span> $${precio}`;
+    precioServicio.innerHTML = `<span>Precio: Desde </span> $${precio}`;
 
     contenedorServicio.appendChild(textoServicio);
     contenedorServicio.appendChild(precioServicio);

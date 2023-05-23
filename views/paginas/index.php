@@ -5,7 +5,7 @@
     <?php foreach ($servicios as $servicio) : ?>
       <div class="servicio">
         <h3 class="servicio__titulo"><?php echo $servicio->nombre; ?></h3>
-        <p class="servicio__precio">$<?php echo $servicio->precio; ?></p>
+        <p class="servicio__precio">Desde $<?php echo $servicio->precio; ?></p>
         <div class="servicio__iconos">
           <i class="fa-solid fa-scissors"></i>
           <i class="fa-solid fa-couch"></i>
